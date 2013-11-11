@@ -7,9 +7,5 @@ class FlashcardsController < ApplicationController
     raw_data = open(url).read
     @parsed_data = JSON.parse(raw_data)
 
-	@first_name = @parsed_data[0]["first_name"]
-    @last_name = @parsed_data[0]["last_name"]
-    @photo= @parsed_data[0]["image_url"]
-
 end
 end
